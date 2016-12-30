@@ -1,8 +1,11 @@
 {
-  "name": "generator-react-webpack-multipage",
+  "name": "generator-react-multipage",
   "version": "0.0.1",
-  "description": "Yeoman generator for using React with Webpack via Babel",
+  "description": "Yeoman generator for React multipage with Webpack via Babel",
   "keywords": [
+    "multipage",
+    "multi-page",
+    "multiple page",
     "yeoman-generator",
     "react",
     "reactjs",
@@ -12,21 +15,20 @@
     "component",
     "frontend",
     "front-end",
-    "app",
-    "multipage"
+    "app"
   ],
   "homepage": "https://github.com/shaozj/generator-react-webpack#readme",
   "bugs": "https://github.com/react-webpack-generators/generator-react-webpack/issues",
   "author": {
-    "name": "Simon Bailey",
-    "email": "simon@newtriks.com",
-    "url": "https://github.com/newtriks"
+    "name": "Zhenjiang Shao",
+    "email": "814184517@qq.com",
+    "url": "https://github.com/shaozj"
   },
   "contributors": [
     {
-      "name": "Christian Schilling",
-      "email": "cs@weblogixx.de",
-      "url": "https://github.com/weblogixx"
+      "name": "Zhenjiang Shao",
+      "email": "814184517@qq.com",
+      "url": "https://github.com/shaozj"
     }
   ],
   "main": "generators/app/index.js",
@@ -36,8 +38,8 @@
     "utils"
   ],
   "repository": {
-    "type": "git",
-    "url": "https://github.com/react-webpack-generators/generator-react-webpack.git"
+    "type": "https",
+    "url": "https://github.com/shaozj/generator-react-multipage"
   },
   "scripts": {
     "test": "istanbul cover _mocha",
