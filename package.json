@@ -1,0 +1,76 @@
+{
+  "name": "generator-react-webpack-multipage",
+  "version": "0.0.1",
+  "description": "Yeoman generator for using React with Webpack via Babel",
+  "keywords": [
+    "yeoman-generator",
+    "react",
+    "reactjs",
+    "webpack",
+    "scaffold",
+    "framework",
+    "component",
+    "frontend",
+    "front-end",
+    "app",
+    "multipage"
+  ],
+  "homepage": "https://github.com/shaozj/generator-react-webpack#readme",
+  "bugs": "https://github.com/react-webpack-generators/generator-react-webpack/issues",
+  "author": {
+    "name": "Simon Bailey",
+    "email": "simon@newtriks.com",
+    "url": "https://github.com/newtriks"
+  },
+  "contributors": [
+    {
+      "name": "Christian Schilling",
+      "email": "cs@weblogixx.de",
+      "url": "https://github.com/weblogixx"
+    }
+  ],
+  "main": "generators/app/index.js",
+  "files": [
+    "generators/app",
+    "generators/component",
+    "utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-webpack-generators/generator-react-webpack.git"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "test:watch": "mocha -w",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "release:major": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:minor": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:patch": "npm version prerelease && git push --follow-tags && npm publish --tag beta"
+  },
+  "dependencies": {
+    "acorn": "^4.0.3",
+    "escodegen": "^1.8.1",
+    "esformatter": "^0.9.6",
+    "esprima": "^3.1.1",
+    "esprima-walk": "^0.1.0",
+    "jsonpath": "^0.2.7",
+    "react-webpack-template": "^2.0.1-6",
+    "underscore.string": "^3.2.2",
+    "yeoman-generator": "^0.24.0",
+    "yeoman-welcome": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.12",
+    "fs-extra": "^0.30.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.0",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=4.0.0",
+    "iojs": ">=1.1.0"
+  },
+  "license": "MIT"
+}
