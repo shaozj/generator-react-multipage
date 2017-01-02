@@ -1,6 +1,6 @@
 'use strict';
 
-const esDefaultOpts               = require('esformatter/lib/preset/default.json');
+const esDefaultOpts = require('esformatter/lib/preset/default.json');
 
 const esOpts = Object.assign({}, esDefaultOpts, {
   'lineBreak': {
