@@ -101,9 +101,9 @@ let getAllSettingsFromComponentName = (componentName, style, useCssModules, isPu
         component: {
           webpackPath: path.normalize(`components/${componentPartPath}/${componentBaseName}Component.js`),
           path: path.normalize(`${componentPath.path}/${componentPartPath}/`),
-          fileName: `${componentBaseName}Component.js`,
-          className: `${componentBaseName}Component`,
-          displayName: `${componentFullName}Component`,
+          fileName: `${componentBaseName}.js`,
+          className: `${componentBaseName}`,
+          displayName: `${componentFullName}`,
           suffix: '.js'
         },
         test: {
