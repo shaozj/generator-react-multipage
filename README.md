@@ -22,7 +22,7 @@ Out of the box it comes with support for:
 ```bash
 # Make sure both is installed globally
 npm install -g yo
-npm install -g generator-react-webpack
+npm install -g generator-react-multipage
 ```
 
 ## Setting up projects
