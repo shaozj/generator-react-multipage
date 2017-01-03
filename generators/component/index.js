@@ -105,6 +105,8 @@ class ComponentGenerator extends Generators.Base {
         this.cssClsPrefix
       );
 
+    this.log('settings: '+ JSON.stringify(settings));
+
     // Create the style template. Skipped if nostyle is set as command line flag
     if(this.useStyles) {
       this.fs.copyTpl(

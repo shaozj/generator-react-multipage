@@ -71,9 +71,9 @@ let getAllSettingsFromComponentName = (componentName, style, useCssModules, isPu
           suffix: styleSettings.suffix
         },
         component: {
-          webpackPath: path.normalize(`components/${componentPartPath}/${componentBaseName}.js`),
+          webpackPath: path.normalize(`components/${componentPartPath}/${componentBaseName}/${componentBaseName}.js`),
           path: path.normalize(`${componentPath.path}/${componentPartPath}/`),
-          fileName: `${componentBaseName}.js`,
+          fileName: `${componentBaseName}/${componentBaseName}.js`,
           className: `${componentBaseName}`,
           classBase: isPure ? 'React.PureComponent' : 'React.Component',
           displayName: `${componentFullName}`,
@@ -92,23 +92,23 @@ let getAllSettingsFromComponentName = (componentName, style, useCssModules, isPu
     default:
       settings = {
         style: {
-          webpackPath: path.normalize(`styles/${componentPartPath}/${componentBaseName}${styleSettings.suffix}`),
-          path: path.normalize(`${stylePaths.path}/${componentPartPath}/`),
-          fileName: `${componentBaseName}${styleSettings.suffix}`,
+          webpackPath: path.normalize(`./${componentBaseName}${styleSettings.suffix}`),
+          path: path.normalize(`${componentPath.path}/${componentPartPath}/`),
+          fileName: `${componentBaseName}/${componentBaseName}${styleSettings.suffix}`,
           className: getComponentStyleName(componentBaseName),
           suffix: styleSettings.suffix
         },
         component: {
-          webpackPath: path.normalize(`components/${componentPartPath}/${componentBaseName}Component.js`),
+          webpackPath: path.normalize(`components/${componentPartPath}/${componentBaseName}/${componentBaseName}.js`),
           path: path.normalize(`${componentPath.path}/${componentPartPath}/`),
-          fileName: `${componentBaseName}.js`,
+          fileName: `${componentBaseName}/${componentBaseName}.js`,
           className: `${componentBaseName}`,
           displayName: `${componentFullName}`,
           suffix: '.js'
         },
         test: {
           path: path.normalize(`${testPath.path}/components/${componentPartPath}/`),
-          fileName: `${componentBaseName}ComponentTest.js`
+          fileName: `${componentBaseName}Test.js`
         }
       };
       break;
