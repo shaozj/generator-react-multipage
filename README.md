@@ -8,6 +8,8 @@
 Generator-React-Webpack will help you build new React projects using modern technologies.
 
 Out of the box it comes with support for:
+
+- Multipage generate
 - Webpack
 - ES2015 via Babel-Loader
 - Different supported style languages (sass, scss, less, stylus)
@@ -15,20 +17,6 @@ Out of the box it comes with support for:
 - Automatic code linting via esLint
 - Ability to unit test components via Karma and Mocha/Chai
 
-## Changes since version 2.0
-This generator is written in ES2015. This means it is ___not compatible with node.js versions before 4.0___.
-
-It also does __NOT__ include support for Flux-Frameworks anymore. Instead, we will use it as a base for other generators to build upon. This will make the base generator easier to use and update.
-
-If you are interested, feel free to write your own generator and use generator-react-webpack as a base (via composition).
-
-If you have built a generator using generator-react-webpack, tell us and we will add a link to our README.
-
-## Generators that extend generator-react-webpack
-- [Generator-React-Webpack-Alt](https://github.com/weblogixx/generator-react-webpack-alt) (Adds ability to create actions, stores and sources for [alt.js](http://alt.js.org))
-- [Generator-React-Webpack-Redux](https://github.com/stylesuxx/generator-react-webpack-redux) (Adds ability to create actions and reducers for [Redux](https://github.com/rackt/redux))
-
----
 
 ## Installation
 ```bash
@@ -43,7 +31,7 @@ npm install -g generator-react-webpack
 mkdir my-new-project && cd my-new-project
 
 # Run the generator
-yo react-webpack
+yo react-multipage
 ```
 
 Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
@@ -52,14 +40,21 @@ Please make sure to edit your newly generated `package.json` file to set descrip
 ```bash
 # After setup of course :)
 # cd my-new-project
-yo react-webpack:component my/namespaced/components/name
+yo react-multipage:component componentName
+```
+
+## Generating new pages
+```bash
+# After setup of course :)
+# cd my-new-project
+yo react-multipage:page pageName
 ```
 
 The above command will create a new component, as well as its stylesheet and a basic testcase.
 
 ## Generating new stateless functional components
 ```
-yo react-webpack:component my/namespaced/components/name --stateless
+yo react-multipage:component componentName --stateless
 ```
 
 Stateless functional components where introduced in React v0.14. They have a much shorter syntax than regular ones and no state or lifecycle methods at all. Please read the [React 0.14 release notes](https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html) to get more information about those components.
@@ -70,11 +65,13 @@ ___Note___: You will still be able to set properties for stateless components!
 If you have enabled [PostCSS](https://github.com/postcss/postcss) at generation time, install your PostCSS plugins via npm and *require* it in **postcss** function in *cfg/base.js*.
 
 Example for autoprefixer:
+
 ```bash
 cd my-new-project
 npm install autoprefixer
 ```
 Require in *cfg/base.js*
+
 ```JavaScript
 ...
 postcss: function () {
@@ -89,6 +86,7 @@ postcss: function () {
 
 ## Usage
 The following commands are available in your project:
+
 ```bash
 # Start for development
 npm start # or
