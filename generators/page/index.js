@@ -5,7 +5,7 @@ const C = utils.constants;
 const getAllSettingsFromComponentName = utils.yeoman.getAllSettingsFromComponentName;
 
 
-class ComponentGenerator extends Generators.Base {
+class PageGenerator extends Generators.Base {
 
   constructor(args, options) {
     super(args, options);
@@ -108,26 +108,26 @@ class ComponentGenerator extends Generators.Base {
     // Create the style template. Skipped if nostyle is set as command line flag
     if(this.useStyles) {
       this.fs.copyTpl(
-        this.templatePath(`${this.generatorVersion}/styles/Component${settings.style.suffix}`),
-        this.destinationPath(settings.style.path + settings.style.fileName),
+        this.templatePath('App.less'),
+        this.destinationPath(`src/pages/${this.name}/App.less`),
         settings
       );
     }
 
-    // Create the component
+    // Create the App.js
     this.fs.copyTpl(
-      this.templatePath(`${this.generatorVersion}/components/${this.componentTemplateName}`),
-      this.destinationPath(settings.component.path + settings.component.fileName),
+      this.templatePath('App.js'),
+      this.destinationPath(`src/pages/${this.name}/App.js`),
       settings
     );
 
-    // Create the unit test
+    // Create the index.js
     this.fs.copyTpl(
-      this.templatePath(`${this.generatorVersion}/tests/Base.js`),
-      this.destinationPath(settings.test.path + settings.test.fileName),
+      this.templatePath('index.js'),
+      this.destinationPath(`src/pages/${this.name}/index.js`),
       settings
     );
   }
 }
 
-module.exports = ComponentGenerator;
+module.exports = PageGenerator;
