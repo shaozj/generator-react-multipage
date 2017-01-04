@@ -85,9 +85,9 @@ class ComponentGenerator extends Generators.Base {
     this.cssClsPrefix = this.config.get('cssClsPrefix') || '';
 
     // Make sure we don't try to use template v3 with cssmodules
-    if (this.generatorVersion < 4 && this.useStyles && this.useCssModules) {
-      this.env.error('Creating components with cssmodules is only supported in generator versions 4+');
-    }
+    //if (this.generatorVersion < 4 && this.useStyles && this.useCssModules) {
+    //  this.env.error('Creating components with cssmodules is only supported in generator versions 4+');
+    //}
 
     // Get the filename of the component template to be copied during this run
     this.componentTemplateName =
