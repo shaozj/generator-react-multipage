@@ -46,7 +46,7 @@ let config = Object.assign({}, baseConfig, {
       filename: 'vendor.js',
       minChunks: 3 // 提取使用3次以上的模块，打包到vendor里
     }),
-    new webpack.NoErrorsPlugin(),
+    //new webpack.NoErrorsPlugin(),
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
     })
