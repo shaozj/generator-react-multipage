@@ -88,6 +88,9 @@ postcss: function () {
 The following commands are available in your project:
 
 ```bash
+# Init project first
+npm run init
+
 # Start for development
 npm start # or
 npm run serve
