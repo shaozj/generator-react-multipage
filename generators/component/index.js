@@ -91,7 +91,7 @@ class ComponentGenerator extends Generators.Base {
 
     // Get the filename of the component template to be copied during this run
     this.componentTemplateName =
-      utils.yeoman.getComponentTemplateName(this.options.stateless, this.useStyles, this.useCssModules);
+      utils.yeoman.getComponentTemplateName(this.options.stateless, this.useStyles, false);
   }
 
   writing() {
