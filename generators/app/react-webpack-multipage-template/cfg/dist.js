@@ -51,7 +51,9 @@ let config = Object.assign({}, baseConfig, {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
+        drop_debugger: true,
+        drop_console: true
       }
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
