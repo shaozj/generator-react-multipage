@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-require('<%= style.webpackPath %>');
+require('./<%= style.webpackPath %>');
 
 class <%= component.className %> extends React.Component {
   render() {
