@@ -81,7 +81,7 @@ class PageGenerator extends Generators.Base {
     }
 
     this.useStyles = !this.options.nostyle;
-    this.useCssModules = this.config.get('cssmodules') || false;
+    this.useCssModules = false; //this.config.get('cssmodules') || false;
     this.cssClsPrefix = this.config.get('cssClsPrefix') || '';
 
     // Make sure we don't try to use template v3 with cssmodules

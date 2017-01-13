@@ -1,4 +1,4 @@
-import 'App.less';
+import './App.less';
 
 class <%= component.className %> extends React.Component {
   constructor(props) {
