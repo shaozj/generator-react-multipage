@@ -49,7 +49,7 @@ function getDefaultModules() {
 
 module.exports = {
   srcPath: srcPath,
-  publicPath: '/build/',
+  publicPath: '/', // assets 资源路径
   port: 8002,
   getDefaultModules: getDefaultModules
 };

@@ -29,7 +29,7 @@ for (let i in config.entry) {
 }
 
 config.devServer = {
-  //contentBase: './build/', 不知为何开了没用
+  contentBase: 'build/', // webpack-dev-server 伺服的文件目录
   historyApiFallback: true,
   port: port,
   publicPath: config.output.publicPath,
